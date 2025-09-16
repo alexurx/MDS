@@ -16,10 +16,12 @@
 1. Удалены папки `bin` и `obj`.  
 2. Попытка запуска `dotnet run --no-build` → ошибка.  
 3. Сборка проекта через `dotnet build`.  
-    ![Скрин](screenshot/2.png)
+
+![Скрин](screenshot/2.png)
     
 4. Запуск `.exe` файла через консоль.  
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/4.png)
+
+![Скрин](screenshot/4.png)
 
 
 ---
@@ -32,23 +34,23 @@
 
 `Console.WriteLine("Hello, Jerry");`
 
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/6.png)
+![Скрин](screenshot/6.png)
 
 #### 2.2. Функция с `A B C`
 
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/5.png)
+![Скрин](screenshot/5.png)
 
 #### 2.3. Вызовы функций
 
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/7.png)
+![Скрин](screenshot/7.png)
 
 #### 2.4. Неиспользуемая функция
 
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/8.png)
+![Скрин](screenshot/8.png)
 
 #### 2.5. Порядок функций
 
-![Скрин](programming/Design%20Soft/Lab_2/screenshot/9.png)
+![Скрин](screenshot/9.png)
 
 ---
 
