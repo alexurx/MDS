@@ -1,0 +1,17 @@
+# Папки .NET
+bin/
+obj/
+
+# IDE и редакторы
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Сборки
+*.exe
+*.dll
+
+# Системные файлы
+Thumbs.db
+*.tmp
