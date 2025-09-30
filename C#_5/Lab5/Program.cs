@@ -1,13 +1,21 @@
 ﻿using System;
 
-// 3. Структура для хранения цен
-public struct Prices
+// Класс для хранения цен
+public class Prices
+{
+    public int Drink = 10;
+    public int First = 20;
+    public int Second = 30;
+}
+
+// Класс для хранения выбора клиента (количество каждого товара)
+public class Choices
 {
     public int Drink;
     public int First;
     public int Second;
 
-    public Prices(int drink, int first, int second)
+    public Choices(int drink, int first, int second)
     {
         Drink = drink;
         First = first;
@@ -19,42 +27,28 @@ class Program
 {
     static void Main()
     {
-        // Создаем общий объект с ценами
-        Prices prices = new Prices(10, 20, 30);
+        Prices prices = new Prices();
 
-        // 2. Блок для клиента 1
+        // Клиент 1
         {
-            int choice1 = 0; // напиток
-            int choice2 = 1; // первое
-            int total = CalculateOrder(prices, choice1, choice2);
-            Console.WriteLine("Сумма заказа клиента 1: " + total);
+            Choices client1 = new Choices(drink: 100, first: 0, second: 250);
+            int total1 = CustomerTotal(prices, client1);
+            Console.WriteLine("Сумма заказа клиента 1: " + total1);
         }
 
-        // 2. Блок для клиента 2
+        // Клиент 2
         {
-            int choice1 = 1; // первое
-            int choice2 = 2; // второе
-            int total = CalculateOrder(prices, choice1, choice2);
-            Console.WriteLine("Сумма заказа клиента 2: " + total);
+            Choices client2 = new Choices(drink: 0, first: 300, second: 0);
+            int total2 = CustomerTotal(prices, client2);
+            Console.WriteLine("Сумма заказа клиента 2: " + total2);
         }
     }
 
-    // 4. Функция для расчета заказа клиента
-    static int CalculateOrder(Prices prices, int choice1, int choice2)
+    // Функция для подсчета стоимости заказа клиента
+    static int CustomerTotal(Prices prices, Choices choices)
     {
-        // 5. Используем отдельную функцию для извлечения цены
-        return GetPrice(prices, choice1) + GetPrice(prices, choice2);
-    }
-
-    // 5. Функция для получения цены по коду товара
-    static int GetPrice(Prices prices, int choice)
-    {
-        return choice switch
-        {
-            0 => prices.Drink,
-            1 => prices.First,
-            2 => prices.Second,
-            _ => 0
-        };
+        return choices.Drink * prices.Drink +
+               choices.First * prices.First +
+               choices.Second * prices.Second;
     }
 }
